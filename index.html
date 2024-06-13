@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Gasto Semanal</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="text-center">Gasto Semanal</h1>
+      </header>
+      <section class="contenido-principal">
+        <div class="row">
+          <div class="col">
+            <div class="contenido primario">
+              <h2 class="text-center">Ingresa tu presupuesto</h2>
+              <form id="ingresar-presupuesto" class="mb-4">
+                <div class="form-group">
+                  <label for="presupuesto">Presupuesto:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="presupuesto"
+                    placeholder="Ingrese su presupuesto"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  id="guardar-presupuesto"
+                  class="btn btn-primary btn-block"
+                >
+                  Guardar Presupuesto
+                </button>
+                <button
+                  type="button"
+                  id="agregar-mas-presupuesto"
+                  class="btn btn-success btn-block d-none"
+                >
+                  Añadir Presupuesto
+                </button>
+              </form>
+
+              <h2 class="text-center">Añade tus gastos aquí</h2>
+              <form id="agregar-gasto" action="#">
+                <div class="form-group">
+                  <label for="gasto">Gasto:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="gasto"
+                    placeholder="Nombre Gasto"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="cantidad">Cantidad:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cantidad"
+                    placeholder="Cantidad en $"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="fecha">Fecha:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fecha"
+                    placeholder="Fecha del gasto (dd/mm/aaaa)"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Agregar
+                </button>
+              </form>
+            </div>
+            <!--.contenido-->
+          </div>
+          <!--.col-->
+
+          <div class="col">
+            <div class="contenido secundario">
+              <h2 class="text-center">Listado</h2>
+
+              <div id="gastos">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Gasto</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Borrar</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="presupuesto" class="presupuesto">
+                <div class="alert alert-primary">
+                  <p>Presupuesto: $ <span id="total"></span></p>
+                </div>
+                <div class="restante alert alert-success">
+                  <p>Restante: $ <span id="restante"></span></p>
+                </div>
+              </div>
+              <!--.presupuesto-->
+            </div>
+            <!--.contenido-->
+          </div>
+          <!--.col-->
+        </div>
+        <!--.row-->
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
